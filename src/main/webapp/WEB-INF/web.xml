@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" version="4.0">
+  <display-name>fulltest</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <servlet-name>UploadImage</servlet-name>
+    <servlet-class>UploadImage
+      </servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UploadImage</servlet-name>
+    <url-pattern>/UploadImage</url-pattern>
+  </servlet-mapping>
+
+ <!--  <servlet>
+    <servlet-name>Login</servlet-name>
+    <servlet-class>Login
+      </servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Login</servlet-name>
+    <url-pattern>/Login</url-pattern>
+  </servlet-mapping>
+    <servlet>
+    <servlet-name>AutoLogin</servlet-name>
+    <servlet-class>AutoLogin
+      </servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AutoLogin</servlet-name>
+    <url-pattern>/AutoLogin</url-pattern>
+  </servlet-mapping>
+    <servlet>
+    <servlet-name>Register</servlet-name>
+    <servlet-class>Register
+      </servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Register</servlet-name>
+    <url-pattern>/Register</url-pattern>
+    
+  </servlet-mapping>
+      <servlet>
+    <servlet-name>CheckEmail</servlet-name>
+    <servlet-class>CheckEmail
+      </servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CheckEmail</servlet-name>
+    <url-pattern>/CheckEmail</url-pattern>
+    
+  </servlet-mapping>
+  
+    <servlet>
+    <servlet-name>UserLogin</servlet-name>
+    <servlet-class>UserLogin
+      </servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UserLogin</servlet-name>
+    <url-pattern>/UserLogin</url-pattern>
+    
+  </servlet-mapping>
+  
+      <servlet>
+    <servlet-name>GoogleSignIn</servlet-name>
+    <servlet-class>GoogleSignIn
+      </servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GoogleSignIn</servlet-name>
+    <url-pattern>/GoogleSignIn</url-pattern>
+    
+  </servlet-mapping>-->
+  
+</web-app>

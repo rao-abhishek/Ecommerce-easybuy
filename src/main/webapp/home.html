@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>EasyBuy</title>
+<link rel="stylesheet" href="css/style.css" text="text/css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous">
+</script>
+    
+</head>
+    
+
+<body>
+
+      <script>
+
+
+      $(document).ready(function(){
+
+      $('#form_submit').click(function(){
+    	        
+    	        var email = $("#email").val();
+    	        var pwd = $("#pwd").val();
+    	        
+    	        $.post("UserLogin",{
+    	            email:email,
+    	            pwd:pwd
+    	        },function(data,status){
+    	            //console.log(data);
+    	            //console.log(status);
+    	           if(data=="1")
+    	               {
+    	                   $('#no_match').css('display', 'none'); 
+    	                   location.href = "home.html";
+    	                   //$('#form_submit').css('display','none');
+    	               }
+    	            
+    	            else{
+    	                $('#no_match').css('display', 'block'); 
+    	               // $('#form_submit').css('display','block');
+    	            }
+    	            
+    	        });
+    	        
+    	        
+    	    });
+    	            
+    	           
+    	   });    
+
+</script>
+
+<div class="header">
+<div class="container">
+	<div class="navbar">
+		<div class="logo">
+	        <img src="img/logo.png" width="125px">
+		</div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Product</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Account</a></li>
+
+<div id="id01" class="modal">
+  
+  <div class="modal-content animate">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="img/logo.png" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+       
+      <label for="email"><b>Username</b></label>
+      <input type="text" placeholder="Enter Email" id="email" name="email" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" id="pwd" name="pwd" required>
+      <p style="color:red;display:none;" id="no_match">Username or Password doesn't match</p>
+      <button type="submit" id="form_submit">Login</button>
+      <label>
+      <a class="register" href="register.html">Register Now</a>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </div>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+                <li><a><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>  
+            </ul>
+        
+        </nav>
+	</div>
+    <div class="row">
+    <div class="col-2">
+        <h1> <span class="title">EasyBuy</span> anything with just a click!</h1>
+        <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,<br> when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+        <a href="#" class="btn">Explore Now &#8594;</a>
+    </div>
+    
+    <div class="col-2">
+        <img src="img/pngwing.com.png" alt="shopping.jpeg">
+    </div>
+    </div>
+</div>
+</div>
+
+<!---Featured categories----->
+<div class="categories">
+
+    <div class="row ">
+        <h1>
+        Going out of stock soon 
+        </h1>
+<div class="feature_products">
+
+    <a href="#"><div class="col-3">  
+        <img src="img/product1.jpg">
+           <div class="product-name">Sneaker #1</div>
+           <div class="product-price">$200</div>
+        </div> </a>  
+    
+      <a href="#"> <div class="col-3">  
+        <img src="img/product3.jpg">
+              <div class="product-name">Sneaker #3</div>
+               <div class="product-price">$200</div>
+       </div>  </a> 
+
+   
+
+    <a href="#"><div class="col-3">  
+        <img src="img/product2.jpg">
+              <div class="product-name">Sneaker #2</div>
+               <div class="product-price">$200</div>
+        </div> </a>  
+
+
+ 
+   <a href="#"> <div class="col-3">  
+        <img src="img/product3.jpg">
+              <div class="product-name">Sneaker #3</div>
+               <div class="product-price">$200</div>
+       </div>  </a> 
+
+</div>
+</div>
+
+</div>
+<!----------- Featured Products --------->
+<div class="all-products">
+ <div class="row ">
+        <h1>
+        You May Like it
+        </h1>
+<div class="feature_products">
+
+    <a href="#"><div class="col-3">  
+        <img src="img/product1.jpg">
+           <div class="product-name">Sneaker #1</div>
+           <div class="product-price">$200</div>
+        </div> </a>  
+
+    
+   
+
+    <a href="#"><div class="col-3">  
+        <img src="img/product2.jpg">
+              <div class="product-name">Sneaker #2</div>
+               <div class="product-price">$200</div>
+        </div> </a>  
+    
+     <a href="#"><div class="col-3">  
+        <img src="img/product4.jpg">
+           <div class="product-name">Sneaker #1</div>
+           <div class="product-price">$200</div>
+        </div> </a>  
+
+
+ 
+   <a href="#"> <div class="col-3">  
+        <img src="img/product3.jpg">
+              <div class="product-name">Sneaker #3</div>
+               <div class="product-price">$200</div>
+       </div>  </a> 
+
+</div>
+</div>
+
+    </div>
+
+<div class="new_on_trend">
+ <div class="row ">
+        <h1>
+        New on Trend
+        </h1>
+<div class="feature_products">
+    <a href="#"><div class="col-3">  
+        <img src="img/product4.jpg">
+              <div class="product-name">Sneaker #2</div>
+               <div class="product-price">$200</div>
+        </div> </a>  
+    
+      <a href="#"><div class="col-3">  
+        <img src="img/product5.jpg">
+           <div class="product-name">Sneaker #1</div>
+           <div class="product-price">$200</div>
+        </div> </a>  
+    
+     <a href="#"><div class="col-3">  
+        <img src="img/product6.jpg">
+           <div class="product-name">Sneaker #1</div>
+           <div class="product-price">$200</div>
+        </div> </a>  
+
+
+ 
+   <a href="#"> <div class="col-3">  
+        <img src="img/product3.jpg">
+              <div class="product-name">Sneaker #3</div>
+               <div class="product-price">$200</div>
+       </div>  </a> 
+
+</div>
+</div>
+
+    </div>
+
+
+</body>
+</html>

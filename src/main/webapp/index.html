@@ -1,0 +1,85 @@
+<html>
+<head>
+    <title>
+        Gooogle Auth Demo
+    </title>
+    
+    <script>
+    function onSignOut()
+    {
+   	 gapi.auth2.getAuthInstance().signOut();
+   	document.querySelector('#info').innerHTML = "User Signed Out";
+    }
+    
+    </script>
+    
+    <meta name="google-signin-client_id" content="438931416423-f9pfhe8pjal6o3ekmbnnmc6rvqemhi16.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    </head>
+    <body>
+        Google Sign in
+
+        <div class="g-signin2" data-onsuccess="onSignIn"></div>
+        <div id="info">
+        </div>
+        
+        <form action="Login" method="post">
+        <input type="text" name="email">
+        <input type="password" name="pwd" >
+        <input type="submit" id="submit_form">
+       </form>
+    
+       <form action="Login" method="post" style="display:none">
+        <input type="text" name="email" id="hemail">
+        <input type="password" name="pwd" id="hpwd" >
+        <input type="submit" id="hsubmit_form">
+       </form>
+    
+ <button onclick="onSignOut()">Sign Out</button>
+        
+        <script>
+            
+        function OnsignOut()
+        {
+        	
+        	gapi.auth.getAuthInstance().signOut().then(function(){
+        		console.log("User Signned Out")
+        	})
+        	
+        	
+        }
+        
+      
+            
+        function onSignIn(googleUser) {
+        	
+            
+        	
+  var profile = googleUser.getBasicProfile();
+  console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+  console.log('Name: ' + profile.getName());
+  //console.log('Password:'+ profile.getPassword());
+  console.log('Image URL: ' + profile.getImageUrl());
+  console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+  var http = new XMLHttpRequest();
+  var url = 'GoogleSignIn';
+  var params = 'id=t'+profile.getId()+'&fname='+profile.getGivenName()+'&lname='+profile.getFamilyName()+'&email='+profile.getEmail();
+  http.open('POST', url, true);
+  location.reload();
+
+  //Send the proper header information along with the request
+  http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+
+  http.onreadystatechange = function() {//Call a function when the state changes.
+      if(http.readyState == 4 && http.status == 200) {
+         // alert(http.responseText);
+      }
+  }
+  http.send(params);
+ 
+      
+}
+            
+        </script>
+    </body>
+</html>

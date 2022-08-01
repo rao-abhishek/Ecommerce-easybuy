@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+        
+    <wb-module deploy-name="fulltest">
+        <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+                
+        <dependent-module archiveName="mysql-connector-java-8.0.28.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/var/mysql">
+                        
+            <dependency-type>uses</dependency-type>
+                    
+        </dependent-module>
+        <dependent-module archiveName="mysql-connector-java-8.0.28.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/Users/Abhishek Rao/Downloads/jar_files/mysql-connector-java-8.0.28.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="protobuf-java-3.11.4.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/Users/Abhishek Rao/Downloads/jar_files/protobuf-java-3.11.4.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="activation-1.1.1.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/Users/Abhishek Rao/Downloads/jar_files/activation-1.1.1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-fileupload-1.4.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/Users/Abhishek Rao/Downloads/jar_files/commons-fileupload-1.4.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-io-2.2.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/Users/Abhishek Rao/Downloads/jar_files/commons-io-2.2.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="json-20220320.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/Users/Abhishek Rao/Downloads/jar_files/json-20220320.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="mail-1.4.7.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/Users/Abhishek Rao/Downloads/jar_files/mail-1.4.7.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+                
+        <property name="context-root" value="fulltest"/>
+                
+        <property name="java-output-path" value="/fulltest/build/classes"/>
+            
+    </wb-module>
+    
+</project-modules>

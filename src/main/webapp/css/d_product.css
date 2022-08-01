@@ -1,0 +1,9 @@
+@charset "UTF-8";
+.product_text
+{
+	    width:50%;
+    flex-basis: 50%;
+    display: flex;
+    //overflow-x: scroll;
+    //overflow-y: hidden;
+}

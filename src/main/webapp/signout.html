@@ -1,0 +1,62 @@
+<html>
+<head>
+    <title>
+        Gooogle Auth Demo
+    </title>
+    
+    <meta name="google-signin-client_id" content="438931416423-f9pfhe8pjal6o3ekmbnnmc6rvqemhi16.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js?onload=onLoad" async defer></script>
+    
+    </head>
+
+    
+    
+    <body>
+        Google Sign in
+
+         <div id="info">
+         
+         User logged in
+         
+        </div>
+        
+        <a href="#" onclick="onSignOut();">Sign Out</a>
+        
+        
+        <script>
+        function onSignOut() {
+          var auth2 = gapi.auth2.getAuthInstance();
+          auth2.signOut().then(function () {
+            console.log('User signed out.');
+            document.location='index.html';
+            
+          });
+        }
+        function onLoad() {
+              gapi.load('auth2', function() {
+              gapi.auth2.init();
+            });
+          }
+   
+      
+            
+        /*function onSignIn(googleUser) {
+  var profile = googleUser.getBasicProfile();
+  console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+  console.log('Name: ' + profile.getName());
+  //console.log('Password:'+ profile.getPassword());
+  console.log('Image URL: ' + profile.getImageUrl());
+  console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+  document.querySelector('#info').innerHTML = profile.getName();
+  var EmailElement = document.querySelector('#hemail');
+      EmailElement.value= profile.getEmail();
+  var PassElement = document.querySelector('#hpwd');
+      PassElement.value = profile.getId();
+      document.getElementById("submit_form").click();
+ 
+      
+}*/
+            
+        </script>
+    </body>
+</html>
