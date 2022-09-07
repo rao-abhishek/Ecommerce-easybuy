@@ -94,7 +94,7 @@ public class BuyFromCart extends HttpServlet {
 			    
 			    Session session2 = Session.getDefaultInstance(props, new javax.mail.Authenticator() {
 				    protected PasswordAuthentication getPasswordAuthentication() {
-					    return new PasswordAuthentication("abhishekrao3011@gmail.com", "Rani@bai@2001");
+					    return new PasswordAuthentication("INVALID@INVALID.COM", "INVALID@INVALID.COM");
 				    
 				
 					
