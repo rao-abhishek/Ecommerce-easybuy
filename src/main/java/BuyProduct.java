@@ -93,7 +93,7 @@ public class BuyProduct extends HttpServlet {
 		        props.put("mail.smtp.starttls.enable", "true");
 		        props.put("mail.smtp.host", host);
 		        props.put("mail.smtp.user", "abhishekrao3011");
-		        props.put("mail.smtp.password", "Rani@bai@2001");
+		        props.put("mail.smtp.password", "---");
 		        props.put("mail.smtp.port", "587");
 		        props.put("mail.smtp.auth", "true");
 		        props.put("mail.smtp.ssl.protocols", "TLSv1.2");
